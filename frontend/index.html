@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pleximus Action Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">✦</div>
+
+            <div>
+                <h1>PLEXIMUS</h1>
+                <span>ACTION AGENT</span>
+            </div>
+        </div>
+
+
+        <div class="status">
+            <span class="status-dot"></span>
+            AI SYSTEM ONLINE
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <p class="section-title">
+                AVAILABLE TOOLS
+            </p>
+
+            <div class="tool-item">
+                <span class="tool-icon">🧮</span>
+                <div>
+                    <strong>Calculator</strong>
+                    <small>Mathematical reasoning</small>
+                </div>
+            </div>
+
+            <div class="tool-item">
+                <span class="tool-icon">🌤️</span>
+                <div>
+                    <strong>Weather</strong>
+                    <small>Live weather data</small>
+                </div>
+            </div>
+
+            <div class="tool-item">
+                <span class="tool-icon">🔤</span>
+                <div>
+                    <strong>Text Utility</strong>
+                    <small>Text analysis & processing</small>
+                </div>
+            </div>
+
+            <div class="tool-item">
+                <span class="tool-icon">💱</span>
+                <div>
+                    <strong>Currency</strong>
+                    <small>Live exchange rates</small>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="architecture">
+
+                <p class="section-title">
+                    AGENT ARCHITECTURE
+                </p>
+
+                <div class="architecture-flow">
+
+                    <span>User</span>
+
+                    <div>↓</div>
+
+                    <span>Gemini AI</span>
+
+                    <div>↓</div>
+
+                    <span>Tool Selection</span>
+
+                    <div>↓</div>
+
+                    <span>Real-world Action</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+                <h2>AI Command Center</h2>
+
+                <p>
+                    Natural language → intelligent tool selection → real action
+                </p>
+            </div>
+
+            <div class="connection">
+                <span></span>
+                Connected
+            </div>
+
+        </header>
+
+
+        <section class="chat-area">
+
+            <div class="welcome">
+
+                <div class="welcome-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    What can I do for you?
+                </h3>
+
+                <p>
+                    Ask naturally. I'll decide which tool to use
+                    and execute the action for you.
+                </p>
+
+            </div>
+
+
+            <!-- CHAT MESSAGES -->
+
+            <div id="messages"></div>
+
+
+            <!-- TOOL ACTIVITY -->
+
+            <div id="activity" class="activity hidden">
+
+                <div class="activity-header">
+
+                    <span>
+                        ⚡ TOOL ACTIVITY
+                    </span>
+
+                    <span id="activityStatus">
+                        EXECUTING
+                    </span>
+
+                </div>
+
+                <div id="activityContent"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INPUT -->
+
+        <div class="input-container">
+
+            <div class="suggestions">
+
+                <button onclick="suggest('What is 1234 × 567?')">
+                    🧮 Calculate
+                </button>
+
+                <button onclick="suggest('What is the weather in Mumbai?')">
+                    🌤 Weather
+                </button>
+
+                <button onclick="suggest('Convert 100 USD to INR')">
+                    💱 Currency
+                </button>
+
+                <button onclick="suggest('How many words are in Artificial intelligence is changing software development?')">
+                    🔤 Text
+                </button>
+
+            </div>
+
+
+            <div class="input-box">
+
+                <textarea
+                    id="userInput"
+                    placeholder="Ask the AI agent to do something..."
+                    rows="1"
+                ></textarea>
+
+                <button
+                    class="send"
+                    onclick="sendMessage()"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+
+            <div class="input-footer">
+
+                <span>
+                    Powered by Gemini AI
+                </span>
+
+                <span>
+                    4 tools available
+                </span>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
